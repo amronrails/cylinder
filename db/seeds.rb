@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+puts "**************** Seeding ******************"
+
+admin = AdminUser.create(:username => "admin", :password => "admin", :email => 'admin@6cylinder.net',
+	:adminstrator => 1)
+
+if admin.errors.blank?
+	puts "**************** Admin Created ******************"
+end
