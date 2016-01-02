@@ -5,6 +5,7 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'acts_as_list', '~> 0.7.2'
 
+gem 'rack-reverse-proxy', '~> 0.9.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use mysql as the database for Active Record
