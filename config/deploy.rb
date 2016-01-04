@@ -2,8 +2,7 @@
 lock '3.4.0'
 
 set :application, 'cylinder'
-set :repo_url, 'set :repo_url, 'https://amronrails:MagdyAmr@6Cylinder@github.com/amronrails/cylinder'
-'
+set :repo_url, 'git@github.com:amronrails/cylinder.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
