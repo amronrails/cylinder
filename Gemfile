@@ -35,7 +35,7 @@ gem 'bcrypt', '~> 3.1.7'
 group :production do
   gem 'pg',             '0.17.1'
   gem 'rails_12factor', '0.0.2'
-  gem 'capistrano', '~> 3.1.0'
+  gem 'capistrano', '~> 3.4.0'
 	gem 'capistrano-rails', '~> 1.1.1'
 	gem 'capistrano-rbenv', github: "capistrano/rbenv"
 end
@@ -47,6 +47,10 @@ group :development, :test do
   gem 'byebug'
 
   gem 'mysql2', '~> 0.3.18'
+  gem 'capistrano', '~> 3.4.0'
+  gem 'capistrano-rails', '~> 1.1.1'
+  gem 'capistrano-rbenv', github: "capistrano/rbenv"
+  gem 'capistrano-ssh-doctor', '~> 1.0'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
