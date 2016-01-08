@@ -17,7 +17,7 @@
   <div class="control-group">
     <%= f.label :model_id, :class => 'control-label' %>
     <div class="controls">
-      <%= f.select(:model_id, @models.map {|p| [p.name, p.id] }, :class => 'form-control') %>
+      <%= f.grouped_collection_select(:model_id, @brands, :models, :name, :id, :name, prompt: true) %>
     </div>
     <%= error_span(@car[:model_id]) %>
   </div>

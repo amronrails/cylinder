@@ -2,6 +2,7 @@ class CreateBrands < ActiveRecord::Migration
   def change
     
     create_table :brands do |t|
+      t.integer :country_id
       t.string :name, :null => false
       t.integer :position
       t.boolean :visible, :default => false
@@ -13,5 +14,6 @@ class CreateBrands < ActiveRecord::Migration
     end
     add_attachment :brands, :icon
     add_index("brands",:permalink)
+    add_index("brands", "country_id")
   end
 end

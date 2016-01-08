@@ -1,0 +1,22 @@
+<h1>Egypt#engez</h1>
+
+<%= label_tag "Select a car" %>
+<%= select_tag "brand_id", options_from_collection_for_select(@companies, "id", "name"), prompt: "Please Select" %>
+
+<%= grouped_collection_select(:model, :id, @companies, :models, :name, :id, :name, include_blank: true) %>
+<%= grouped_collection_select(:car, :id, @models, :cars, :name, :id, :name, include_blank: true) %>
+
+<%= submit_tag "Engez"%>
+<script type="text/javascript">
+"use scrict";
+
+// this only works in IE9 and above, but fine everywhere else
+document.getElementById("new_brand").addEventListener( "submit", estimateOrder);
+
+function estimateOrder(event) {
+	// do not try to submit this form
+
+	event.preventDefault();
+
+}
+</script>

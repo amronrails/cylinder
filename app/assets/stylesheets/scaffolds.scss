@@ -4,7 +4,6 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  height:100%;
 }
 
 p, ol, ul, td {
@@ -71,25 +70,4 @@ div {
     font-size: 12px;
     list-style: square;
   }
-}
-
-
-
-footer{
-  margin-top: 50px;
-  color: #ffffff;
-  width: 100%;
-  height:80px;
-  position: fixed;
-  bottom: 0px;
-  padding-top: 10px;
-  padding-left: 15px;
-  background-color: #3071A9;
-  left: 0;
-  border-style: solid;
-  border-top-color: #080727;
-  border-left-color: #3071A9;
-  border-bottom-color: #3071A9;
-  border-right-color: #3071A9;
-
 }

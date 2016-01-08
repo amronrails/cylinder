@@ -1,6 +1,8 @@
 class Brand < ActiveRecord::Base
 	
 	#relations 
+	belongs_to :country
+
 	has_many :models
 	has_and_belongs_to_many :admin_users
 

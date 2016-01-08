@@ -1,2 +1,34 @@
 <h1>Egypt#newcars</h1>
 <p>Find me in app/views/egypt/newcars.html.erb</p>
+
+<% @models.each  do |model| %>
+<h3><%= model.name%></h3>
+<% model.cars.each  do |car| %>
+<%= car.name%>
+<%= check_box_tag "compare", car.permalink%>
+<% end %>
+<% end %>
+<br>
+
+<button type="button"
+onclick="Compare()">
+Compare</button>
+
+<script type="text/javascript">
+	var x = document.getElementsByName('compare');
+	var y;
+
+$("#compare").change(function() {
+    if(this.checked) {
+        console.log("I reached here");
+        y = x[0].value;
+    }
+    else{
+    	console.log("unchecked");
+    	y=null;
+    }
+});
+function Compare(){
+	console.log(y);
+}
+</script>

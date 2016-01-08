@@ -62,8 +62,6 @@ GEM
     capistrano-rails (1.1.5)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
-    capistrano-ssh-doctor (1.0.0)
-      capistrano (>= 3.1)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.7)
@@ -215,7 +213,6 @@ DEPENDENCIES
   capistrano (~> 3.4.0)
   capistrano-rails (~> 1.1.1)
   capistrano-rbenv!
-  capistrano-ssh-doctor (~> 1.0)
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails

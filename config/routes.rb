@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :countries
+
   resources :users
 
   root "egypt#index"
 
-  get 'companies/:permalink', :to => "egypt#companies"
 
   get 'compare', :to => "egypt#compare"
   get 'compare/:permalink1', :to => "egypt#compare"
@@ -12,7 +13,6 @@ Rails.application.routes.draw do
   get 'compare/:permalink1/:permalink2/:permalink3', :to => "egypt#compare"
   get 'compare/:permalink1/:permalink2/:permalink3/:permalink4', :to => "egypt#compare"
 
-  get 'companies', :to => "egypt#newcars"
 
   get 'vehicles/:permalink', :to => "egypt#vehicles"
 

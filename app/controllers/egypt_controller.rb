@@ -29,8 +29,19 @@ class EgyptController < ApplicationController
     
   end
 
-  def newcars
+  def engez
+    @companies = Brand.sorted
+    @models = Model.sorted
+    @car = Brand.new
+  end
 
+  def newcars
+    @models = Model.sorted
+    @compare = Car.new
+    respond_to do |format|
+       format.html # new.html.erb
+       format.js
+    end
   end
 
   def compare

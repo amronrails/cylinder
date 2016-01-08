@@ -25,11 +25,13 @@ class CarsController < ApplicationController
   def new
     @car = Car.new
     @models = Model.sorted
+    @brands = Brand.sorted
   end
 
   # GET /cars/1/edit
   def edit
     @models = Model.sorted
+    @brands = Brand.sorted
   end
 
   # POST /cars
@@ -37,6 +39,7 @@ class CarsController < ApplicationController
   def create
     @car = Car.new(car_params)
     @models = Model.sorted
+    @brands = Brand.sorted
     respond_to do |format|
       if @car.save
         format.html { redirect_to @car, notice: 'Car was successfully created.' }

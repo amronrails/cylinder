@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151201164350) do
+ActiveRecord::Schema.define(version: 20160108003456) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string   "username",        limit: 255, null: false
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20151201164350) do
   end
 
   create_table "brands", force: :cascade do |t|
+    t.integer  "country_id",        limit: 4
     t.string   "name",              limit: 255,                   null: false
     t.integer  "position",          limit: 4
     t.boolean  "visible",           limit: 1,     default: false
@@ -58,6 +59,7 @@ ActiveRecord::Schema.define(version: 20151201164350) do
     t.datetime "icon_updated_at"
   end
 
+  add_index "brands", ["country_id"], name: "index_brands_on_country_id", using: :btree
   add_index "brands", ["permalink"], name: "index_brands_on_permalink", using: :btree
 
   create_table "car_prices", force: :cascade do |t|
@@ -164,6 +166,19 @@ ActiveRecord::Schema.define(version: 20151201164350) do
 
   add_index "cars", ["model_id"], name: "index_cars_on_model_id", using: :btree
   add_index "cars", ["permalink"], name: "index_cars_on_permalink", using: :btree
+
+  create_table "countries", force: :cascade do |t|
+    t.string   "name",         limit: 255
+    t.integer  "position",     limit: 4
+    t.boolean  "visible",      limit: 1
+    t.string   "permalink",    limit: 255, null: false
+    t.integer  "brandsNumber", limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_index "countries", ["name"], name: "index_countries_on_name", using: :btree
+  add_index "countries", ["permalink"], name: "index_countries_on_permalink", using: :btree
 
   create_table "models", force: :cascade do |t|
     t.integer  "brand_id",            limit: 4

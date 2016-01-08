@@ -16,7 +16,6 @@ require 'capistrano/deploy'
 #   https://github.com/capistrano/passenger
 require 'capistrano/bundler'
 require 'capistrano/rails'
-require 'capistrano/ssh_doctor'
 
 # If you are using rbenv add these lines:
 require 'capistrano/rbenv'
