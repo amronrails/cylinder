@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<%= javascript_include_tag "application" %>
+<%= javascript_include_tag('public') %>
 <style>
  html {
 	width: 100%;
@@ -61,7 +61,7 @@ a:hover {
 	clear: both;
 }
 #container #header #logos {
-	background-image: url(Untitled-1-Recovered_03.png);
+	background-image: url(<%= image_url("Untitled-1-Recovered_03.png")%>);
 	height: 196px;
 	width: 690px;
 	display: block;
