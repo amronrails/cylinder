@@ -7,6 +7,7 @@ jQuery ->
 	$('#model_id').hide()
 	$('#car_id').hide()
 	$('#brand_id').change ->
+		$('#car_id').hide()
 		$('#model_id').show()
 		brand = $('#brand_id :selected').text()
 		options = $(models).filter("optgroup[label='#{brand}']").html()
