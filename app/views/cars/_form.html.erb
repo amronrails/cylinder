@@ -633,3 +633,23 @@
             cars_path, :class => 'btn btn-default' %>
 
 <% end %>
+
+<script type="text/javascript">
+  var permalink = "";
+  $('#car_model_id').change(function() {
+    permalink = document.getElementById('car_model_id').value;
+    permalink = "x";
+    console.log(permalink);
+});
+  $('#car_name').change(function() {
+    permalink += "-" + document.getElementById('car_name').value;
+    console.log(permalink);
+});
+</script>
+
+
+
+
+
+
+

@@ -25,4 +25,3 @@ jQuery ->
 		else
 			$('#car_id').empty()
 			$('#car_id').hide()
-
