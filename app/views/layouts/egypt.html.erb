@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<%= stylesheet_link_tag ('public') %>
 <%# I have moved the style tag to assets/stylesheets/egypt%>
 </head>
 <body>
@@ -16,12 +15,12 @@
     </div> 
        <div id="navbar"> 
          <ul>
-           <li><a href="about.html" title="about" target="_self">بحث</a></li>
-           <li><a href="new.html"> جديد </a></li>
-           <li><a href="repaired.html" title="repaired" target="_top">مستعمل </a></li>
-           <li><a href="repaired.html"> خدمات </a></li>
-           <li><a href="petrom.html"> بنزين </a></li>
-           <li><a href="insurance.html"> تأمين</a></li>
+           <li><a href="#" title="about" target="_self">بحث</a></li>
+           <li><a href="#"> جديد </a></li>
+           <li><a href="#" title="repaired" target="_top">مستعمل </a></li>
+           <li><a href="#"> خدمات </a></li>
+           <li><a href="#"> بنزين </a></li>
+           <li><a href="#"> تأمين</a></li>
          </ul>
       </div> 
 </div> 
@@ -36,6 +35,7 @@
        <div id="contact"> 
 
     </div>
+    <%= stylesheet_link_tag ('public') %>
     <%= javascript_include_tag('public')  %>
 </div> 
 </div>     
