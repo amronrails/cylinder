@@ -9,6 +9,7 @@ set :repo_url, 'git@github.com:amronrails/cylinder.git'
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, '/home/deploy/cylinder'
+set :rbenv_path, '/home/deploy/.rbenv/'
 # Default value for :scm is :git
 # set :scm, :git
 
