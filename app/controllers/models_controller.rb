@@ -3,6 +3,8 @@ class ModelsController < ApplicationController
 
   #TODO
   #before_action :confirm_login
+  before_action :confirm_login
+
   before_action :set_model, only: [:show, :edit, :update, :destroy]
   before_action :set_brand
   # GET /models

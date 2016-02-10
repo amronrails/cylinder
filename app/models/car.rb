@@ -5,6 +5,9 @@ class Car < ActiveRecord::Base
 	has_many :car_prices
 	has_many :agents, :through => :car_prices
 
+	has_many :car_specs
+	has_many :specs, :through => :car_specs
+
 	#inbetween
 	acts_as_list :scope => :model
 	scope :visible, lambda { where(:visible => true) }

@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   layout 'twitter'
+  before_action :confirm_login
 
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 

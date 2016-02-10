@@ -1,9 +1,9 @@
 class CarPricesController < ApplicationController
   layout 'twitter'
+  before_action :confirm_login
   before_action :set_car
   before_action :set_agent
   before_action :set_car_price, only: [:show, :edit, :update, :destroy]
-  before_action :confirm_login
   # GET /car_prices
   # GET /car_prices.json
   def index

@@ -1,0 +1,59 @@
+<%= form_for @car_spec, :html => { :class => "form-horizontal car_spec" } do |f| %>
+
+    <% if @car_spec.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@car_spec.errors.count, "error") %> prohibited this car_spec from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @car_spec.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :car_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select(:car_id, @cars.map {|a| [a.name, a.id] } ,:class => 'form-control') %>
+    </div>
+    <%= error_span(@car_spec[:car_id]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :spec_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select(:spec_id, @specs.map {|a| [a.name, a.id] } ,:class => 'form-control') %>
+    </div>
+    <%= error_span(@car_spec[:spec_id]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :value, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :value, :class => 'form-control' %>
+    </div>
+    <%= error_span(@car_spec[:value]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :value_ar, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :value_ar, :class => 'form-control' %>
+    </div>
+    <%= error_span(@car_spec[:value_ar]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :hary, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :hary, :class => 'form-control' %>
+    </div>
+    <%= error_span(@car_spec[:hary]) %>
+  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            car_specs_path, :class => 'btn btn-default' %>
+
+<% end %>

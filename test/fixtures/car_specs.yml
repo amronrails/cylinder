@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  car_id: 1
+  spec_id: 1
+  value: MyString
+  value_ar: MyString
+  hary: MyText
+
+two:
+  car_id: 1
+  spec_id: 1
+  value: MyString
+  value_ar: MyString
+  hary: MyText

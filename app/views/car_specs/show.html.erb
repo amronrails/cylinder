@@ -1,0 +1,27 @@
+<%- model_class = CarSpec -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:car_id) %>:</strong></dt>
+  <dd><%= @car_spec.car_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:spec_id) %>:</strong></dt>
+  <dd><%= @car_spec.spec_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:value) %>:</strong></dt>
+  <dd><%= @car_spec.value %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:value_ar) %>:</strong></dt>
+  <dd><%= @car_spec.value_ar %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:hary) %>:</strong></dt>
+  <dd><%= @car_spec.hary %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              car_specs_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_car_spec_path(@car_spec), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              car_spec_path(@car_spec),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

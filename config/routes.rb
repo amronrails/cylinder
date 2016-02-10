@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :car_specs
+
+  resources :specs
+
   resources :countries
 
   resources :users

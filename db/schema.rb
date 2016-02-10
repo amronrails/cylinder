@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160108003456) do
+ActiveRecord::Schema.define(version: 20160209070236) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string   "username",        limit: 255, null: false
@@ -71,6 +71,18 @@ ActiveRecord::Schema.define(version: 20160108003456) do
   end
 
   add_index "car_prices", ["agent_id", "car_id"], name: "index_car_prices_on_agent_id_and_car_id", using: :btree
+
+  create_table "car_specs", force: :cascade do |t|
+    t.integer  "car_id",     limit: 4
+    t.integer  "spec_id",    limit: 4
+    t.string   "value",      limit: 255
+    t.string   "value_ar",   limit: 255
+    t.text     "hary",       limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_index "car_specs", ["car_id", "spec_id"], name: "index_car_specs_on_car_id_and_spec_id", using: :btree
 
   create_table "cars", force: :cascade do |t|
     t.integer  "model_id",                 limit: 4
@@ -199,6 +211,20 @@ ActiveRecord::Schema.define(version: 20160108003456) do
 
   add_index "models", ["brand_id"], name: "index_models_on_brand_id", using: :btree
   add_index "models", ["permalink"], name: "index_models_on_permalink", using: :btree
+
+  create_table "specs", force: :cascade do |t|
+    t.integer  "position",   limit: 4
+    t.string   "key",        limit: 255
+    t.boolean  "visible",    limit: 1
+    t.string   "name",       limit: 255
+    t.string   "name_ar",    limit: 255
+    t.text     "info",       limit: 65535
+    t.string   "value",      limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_index "specs", ["key"], name: "index_specs_on_key", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "username",        limit: 255, null: false

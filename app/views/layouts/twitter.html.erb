@@ -55,6 +55,8 @@
             <li style="padding-top: 45px; font-size: 16px;"><%= link_to "Models", {:controller => 'models', :action => 'index'}  %></li>
             <li style="padding-top: 45px; font-size: 16px;"><%= link_to "Cars", {:controller => 'cars', :action => 'index'}  %></li>
             <li style="padding-top: 45px; font-size: 16px;"><%= link_to "agents", {:controller => 'agents', :action => 'index'}  %></li>
+            <li style="padding-top: 45px; font-size: 16px;"><%= link_to "specs", {:controller => 'specs', :action => 'index'}  %></li>
+
 
             <% if !session[:username].blank? %>
             <% user = session[:username] %>
@@ -81,6 +83,7 @@
               <li><%= link_to "Models", {:controller => 'models', :action => 'index'}  %></li>
               <li><%= link_to "Cars", {:controller => 'cars', :action => 'index'}  %></li>
               <li><%= link_to "Car Prices", {:controller => 'car_prices'}  %></li>
+              <li><%= link_to "Car Specs", {:controller => 'car_specs'}  %></li>
               <li><%= link_to "Countries", {:controller => 'countries'}  %></li>
 
             </ul>
