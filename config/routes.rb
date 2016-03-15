@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'soon/index'
+
   resources :car_specific_specs
 
   resources :specific_specs
@@ -16,7 +18,7 @@ Rails.application.routes.draw do
 
   resources :users
 
-  root "egypt#index"
+  root "soon#index"
 
 
   get 'compare', :to => "egypt#compare"
