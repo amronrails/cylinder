@@ -1,0 +1,39 @@
+<%= form_for @car_image, :html => { :class => "form-horizontal car_image" } do |f| %>
+
+    <% if @car_image.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@car_image.errors.count, "error") %> prohibited this car_image from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @car_image.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :model_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.grouped_collection_select(:model_id, @brands, :models, :name, :id, :name, prompt: true) %>
+    </div>
+    <%= error_span(@car_image[:model_id]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :avatar, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.file_field :avatar %>
+    </div>
+    <%= error_span(@car_image[:avatar]) %>
+  </div>
+  
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            car_images_path, :class => 'btn btn-default' %>
+
+<% end %>

@@ -1,44 +1,104 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<%# I have moved the style tag to assets/stylesheets/egypt%>
-</head>
-<body>
-<div id="container"> 
-<div id="header">
-    <div id="logos">
-    <%= link_to image_tag("Untitled-1-Recovered_03.png", width: "431"), root_path ,title: "6-cylinder", target: "_self", id: "logo"%>
-    </div> 
-      <div id="banner"> 
-
-    </div> 
-       <div id="navbar"> 
+  <!doctype html>
+  <html dir="rtl">
+  
+  <head>
+  
+ 
+  
+  <meta charset="utf-8">
+    <link rel="stylesheet" href="cars-style.css" />
+      <link rel="stylesheet" href="jquery-ui.css" />
+     <link rel="stylesheet" href="fotorama.css" />    
+  
+  
+    
+  </head>
+  
+  <body>
+   
+  <header id="header">
+   
+    <div class="slides">
+   <div id="first" class="hvr-bounce-to-top"><img src="images/car-icon.png" width="50" height="50" alt=""/> <p>سيارات جديدة</p> </div>
+    <div id="second" class="hvr-bounce-to-top"> نقيلي </div>
+   <div id="third" class="hvr-bounce-to-top">مراكز خدمة </div>
+   <div id="forth" class="hvr-bounce-to-top"> أخبار</div>
+   <div id="fifth" class="hvr-bounce-to-top">كسر زيرو </div>
+   <div id="logo" class="hvr-bounce-to-top"><img src="images/logo.png" width="408" height="77" alt="" id="image-logo" /></div>
+  </div> 
+  </header>
+  
+  <nav class="main-nav">
+     <ul class="nav-elements">
+     <li> <a href="google.com"> بحث</a>
+        <ul>
+         <li> <a href="sub1-main"> sub1-main</a>
          <ul>
-           <li><a href="#" title="about" target="_self">بحث</a></li>
-           <li><a href="#"> جديد </a></li>
-           <li><a href="#" title="repaired" target="_top">مستعمل </a></li>
-           <li><a href="#"> خدمات </a></li>
-           <li><a href="#"> بنزين </a></li>
-           <li><a href="#"> تأمين</a></li>
-         </ul>
-      </div> 
-</div> 
-<%= yield %>
-<div id="footer"> 
-  <p> this is the footer </p>
-     <div id="nav">  
+         <li> <a href="sub1-sub1-main">  sub1-sub1-main</a></li>
+        <li> <a href="sub2-sub1-main">sub2-sub1-main</a></li>
+        <li> <a href="sub3-sub1-main"> sub3-sub1-main</a></li>
+        </ul>
+         
+         </li>
+        <li> <a href="sub2-main"> sub2-main</a></li>
+        <li> <a href="sub3-main"> sub3-main</a>
+            <ul>
+         <li> <a href="sub1-sub1-main">  sub1-sub1-main</a></li>
+        <li> <a href="sub2-sub1-main">sub2-sub1-main</a></li>
+        <li> <a href="sub3-sub1-main"> sub3-sub1-main</a></li>
+        </ul>
+        
+        </li>
+        </ul>
+      </li>
+     <li> <a href= "google.com" > مستعمل</a> 
+     <ul>
+         <li> <a href="sub1-main2"> sub1-main2</a></li>
+        <li> <a href="sub2-main2"> sub2-main2</a></li>
+        <li> <a href="sub3-main3"> sub3-main2</a></li>
+        </ul>
+     </li>
+     <li> <a href= "google.com" >عربية جديدة  </a></li>
+     <li><a href= "google.com" >الرئيسية </a></li>
+     </ul>
+     
+      <div class="rightcorner"></div>
+   </nav>
+  <!--main section-->
+  
+  <div class="main">
+  <div class="main-containter">
+  
+   <section class="top_section" id=" ">
+    <%= yield %>
 
-    </div> 
-      <div id="social media"> 
-
-    </div> 
-       <div id="contact"> 
-           
+    </section>
+   
+    
+    <aside id="aside" class="sections">
+    <div id="h1">
+  
+    
+     </div>
+    </aside>
     </div>
-    <%= stylesheet_link_tag ('public') %>
-    <%= javascript_include_tag('public')  %>
-</div> 
-</div>     
-</body>
-</html>
+   
+  
+
+  <footer class="footer">Content for New footer Tag Goes Here</footer>
+   
+  <%= stylesheet_link_tag ('public') %>
+  <%= javascript_include_tag('public')  %>
+   
+  </body>
+  </html>
+
+
+
+
+
+
+
+
+
+

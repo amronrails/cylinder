@@ -1,12 +1,11 @@
 <%- model_class = Car -%>
 <div class="page-header">
-  <h1><%= @car.name %></h1>
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
 </div>
-
 
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:model_id) %>:</strong></dt>
-  <dd><%= Model.find(@car.model_id).name %></dd>
+  <dd><%= @car.model_id %></dd>
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
   <dd><%= @car.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:visible) %>:</strong></dt>
@@ -21,11 +20,68 @@
   <dd><%= @car.position %></dd>
   <dt><strong><%= model_class.human_attribute_name(:year) %>:</strong></dt>
   <dd><%= @car.year %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:image) %>:</strong></dt>
-  <dd><%= image_tag @car.image.url (:thumb) %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:image_file_name) %>:</strong></dt>
+  <dd><%= @car.image_file_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:image_content_type) %>:</strong></dt>
+  <dd><%= @car.image_content_type %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:image_file_size) %>:</strong></dt>
+  <dd><%= @car.image_file_size %></dd>
   <dt><strong><%= model_class.human_attribute_name(:image_updated_at) %>:</strong></dt>
   <dd><%= @car.image_updated_at %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:motorCapacity) %>:</strong></dt>
+  <dd><%= @car.motorCapacity %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:horsePower) %>:</strong></dt>
+  <dd><%= @car.horsePower %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:takseet) %>:</strong></dt>
+  <dd><%= @car.takseet %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:review_total) %>:</strong></dt>
+  <dd><%= @car.review_total %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:int_review_total) %>:</strong></dt>
+  <dd><%= @car.int_review_total %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:int_review1) %>:</strong></dt>
+  <dd><%= @car.int_review1 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:int_review2) %>:</strong></dt>
+  <dd><%= @car.int_review2 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:int_review3) %>:</strong></dt>
+  <dd><%= @car.int_review3 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:int_review4) %>:</strong></dt>
+  <dd><%= @car.int_review4 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:int_review5) %>:</strong></dt>
+  <dd><%= @car.int_review5 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:float_review1) %>:</strong></dt>
+  <dd><%= @car.float_review1 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:float_review2) %>:</strong></dt>
+  <dd><%= @car.float_review2 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:float_review3) %>:</strong></dt>
+  <dd><%= @car.float_review3 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:float_review4) %>:</strong></dt>
+  <dd><%= @car.float_review4 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:float_review5) %>:</strong></dt>
+  <dd><%= @car.float_review5 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:price) %>:</strong></dt>
+  <dd><%= @car.price %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:price2) %>:</strong></dt>
+  <dd><%= @car.price2 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:additional) %>:</strong></dt>
+  <dd><%= @car.additional %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:additional2) %>:</strong></dt>
+  <dd><%= @car.additional2 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:additional3) %>:</strong></dt>
+  <dd><%= @car.additional3 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:additional4) %>:</strong></dt>
+  <dd><%= @car.additional4 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:additional5) %>:</strong></dt>
+  <dd><%= @car.additional5 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:additional6) %>:</strong></dt>
+  <dd><%= @car.additional6 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:additional7) %>:</strong></dt>
+  <dd><%= @car.additional7 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:additional8) %>:</strong></dt>
+  <dd><%= @car.additional8 %></dd>
 </dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              cars_path, :class => 'btn btn-default'  %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_car_path(@car), :class => 'btn btn-default' %>
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
@@ -33,11 +89,3 @@
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>
-
-<div class="khra">
-<%= render :template => 'car_prices/index' %>
-</div>
-
-<%= link_to t('.back', :default => t("helpers.links.back")),
-              cars_path, :class => 'btn btn-default'  %>
-

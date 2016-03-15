@@ -1,0 +1,59 @@
+<%= form_for @specific_spec, :html => { :class => "form-horizontal specific_spec" } do |f| %>
+
+    <% if @specific_spec.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@specific_spec.errors.count, "error") %> prohibited this specific_spec from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @specific_spec.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :position, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :position, :class => 'form-control' %>
+    </div>
+    <%= error_span(@specific_spec[:position]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :key, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :key, :class => 'form-control' %>
+    </div>
+    <%= error_span(@specific_spec[:key]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :visible, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :visible, :class => 'form-control' %>
+    </div>
+    <%= error_span(@specific_spec[:visible]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :info, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :info, :class => 'form-control' %>
+    </div>
+    <%= error_span(@specific_spec[:info]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :extra, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :extra, :class => 'form-control' %>
+    </div>
+    <%= error_span(@specific_spec[:extra]) %>
+  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            specific_specs_path, :class => 'btn btn-default' %>
+
+<% end %>

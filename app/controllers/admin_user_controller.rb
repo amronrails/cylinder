@@ -31,9 +31,22 @@ class AdminUserController < ApplicationController
   end
 
   def update
-
+    @admin_user = AdminUser.find(params[:id])
+    if @admin_user.update(admin_user_params)
+      flash[:notice] = "User updated"
+      redirect_to(:action => 'index')
+    else
+      flash[:notice] = "Not Updated"
+      render('new')
+    end
   end
   
+  def destroy
+    @admin_user = AdminUser.find(params[:id])
+    @admin_user.destroy
+    redirect_to(:action => 'index')
+  end
+
 def admin_user_params
     params.require(:admin_user).permit(:adminstrator, :username, :password)
   end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160209070236) do
+ActiveRecord::Schema.define(version: 20160222170651) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string   "username",        limit: 255, null: false
@@ -62,6 +62,16 @@ ActiveRecord::Schema.define(version: 20160209070236) do
   add_index "brands", ["country_id"], name: "index_brands_on_country_id", using: :btree
   add_index "brands", ["permalink"], name: "index_brands_on_permalink", using: :btree
 
+  create_table "car_images", force: :cascade do |t|
+    t.integer  "model_id",            limit: 4
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.string   "avatar_file_name",    limit: 255
+    t.string   "avatar_content_type", limit: 255
+    t.integer  "avatar_file_size",    limit: 4
+    t.datetime "avatar_updated_at"
+  end
+
   create_table "car_prices", force: :cascade do |t|
     t.integer  "agent_id",   limit: 4
     t.integer  "car_id",     limit: 4
@@ -85,95 +95,45 @@ ActiveRecord::Schema.define(version: 20160209070236) do
   add_index "car_specs", ["car_id", "spec_id"], name: "index_car_specs_on_car_id_and_spec_id", using: :btree
 
   create_table "cars", force: :cascade do |t|
-    t.integer  "model_id",                 limit: 4
-    t.string   "name",                     limit: 255,               null: false
-    t.boolean  "visible",                  limit: 1
-    t.string   "permalink",                limit: 255,               null: false
-    t.integer  "counter",                  limit: 4,     default: 0
-    t.text     "description",              limit: 65535
-    t.integer  "position",                 limit: 4
-    t.integer  "year",                     limit: 4
-    t.datetime "created_at",                                         null: false
-    t.datetime "updated_at",                                         null: false
-    t.string   "image_file_name",          limit: 255
-    t.string   "image_content_type",       limit: 255
-    t.integer  "image_file_size",          limit: 4
+    t.integer  "model_id",           limit: 4
+    t.string   "name",               limit: 255,               null: false
+    t.boolean  "visible",            limit: 1
+    t.string   "permalink",          limit: 255,               null: false
+    t.integer  "counter",            limit: 4,     default: 0
+    t.text     "description",        limit: 65535
+    t.integer  "position",           limit: 4
+    t.integer  "year",               limit: 4
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
+    t.string   "image_file_name",    limit: 255
+    t.string   "image_content_type", limit: 255
+    t.integer  "image_file_size",    limit: 4
     t.datetime "image_updated_at"
-    t.string   "motorCapacity",            limit: 255
-    t.string   "gearBox",                  limit: 255
-    t.string   "numberOfShifts",           limit: 255
-    t.string   "carShape",                 limit: 255
-    t.string   "cylinders",                limit: 255
-    t.string   "sababat",                  limit: 255
-    t.string   "fuelType",                 limit: 255
-    t.string   "fuelInjectionType",        limit: 255
-    t.string   "torque",                   limit: 255
-    t.string   "horsePower",               limit: 255
-    t.string   "acceleration",             limit: 255
-    t.string   "traction",                 limit: 255
-    t.string   "doorsNumber",              limit: 255
-    t.string   "seatsNumber",              limit: 255
-    t.string   "averageFuelConsumption",   limit: 255
-    t.string   "tankCapacity",             limit: 255
-    t.string   "carHeight",                limit: 255
-    t.string   "highestSpeed",             limit: 255
-    t.string   "airbagsnumber",            limit: 255
-    t.string   "electronicChairs",         limit: 255
-    t.string   "ABS",                      limit: 255
-    t.string   "EBD",                      limit: 255
-    t.string   "ESP",                      limit: 255
-    t.string   "stealInzar",               limit: 255
-    t.string   "stealImbolizerSystem",     limit: 255
-    t.string   "sportWheels",              limit: 255
-    t.string   "wheelSize",                limit: 255
-    t.string   "fogLights",                limit: 255
-    t.string   "electronicClosingMirrors", limit: 255
-    t.string   "zinonLights",              limit: 255
-    t.string   "lightsSensor",             limit: 255
-    t.string   "LEDLights",                limit: 255
-    t.string   "spoiler",                  limit: 255
-    t.string   "electronicTara",           limit: 255
-    t.string   "parkingAssist",            limit: 255
-    t.string   "parkinSensor",             limit: 255
-    t.string   "backCamera",               limit: 255
-    t.string   "engineStart",              limit: 255
-    t.string   "smartKey",                 limit: 255
-    t.string   "AUX",                      limit: 255
-    t.string   "bluetooth",                limit: 255
-    t.string   "ChargingSystem",           limit: 255
-    t.string   "CD",                       limit: 255
-    t.string   "USB",                      limit: 255
-    t.string   "electronicCarGlass",       limit: 255
-    t.string   "multiTara",                limit: 255
-    t.string   "multiKey",                 limit: 255
-    t.string   "controlDriverSeatHeight",  limit: 255
-    t.string   "leatherTara",              limit: 255
-    t.string   "leatherFarsh",             limit: 255
-    t.string   "constantSpeedControl",     limit: 255
-    t.string   "leatherGearbox",           limit: 255
-    t.string   "storagePlacesFront",       limit: 255
-    t.string   "storagePlacesBack",        limit: 255
-    t.string   "storagePlacesColonswa",    limit: 255
-    t.string   "packingBackChairs",        limit: 255
-    t.string   "cigaretteLighter",         limit: 255
-    t.string   "centerLock",               limit: 255
-    t.string   "backSeatsAC",              limit: 255
-    t.string   "mas7atSensors",            limit: 255
-    t.string   "trunkCapacity",            limit: 255
-    t.string   "ta2felType",               limit: 255
-    t.string   "turboEngine",              limit: 255
-    t.string   "engineType",               limit: 255
-    t.string   "gearBoxType",              limit: 255
-    t.string   "price",                    limit: 255
-    t.string   "price2",                   limit: 255
-    t.string   "additional",               limit: 255
-    t.string   "additional2",              limit: 255
-    t.string   "additional3",              limit: 255
-    t.string   "additional4",              limit: 255
-    t.string   "additional5",              limit: 255
-    t.string   "additional6",              limit: 255
-    t.string   "additional7",              limit: 255
-    t.string   "additional8",              limit: 255
+    t.string   "motorCapacity",      limit: 255
+    t.string   "horsePower",         limit: 255
+    t.string   "takseet",            limit: 255
+    t.float    "review_total",       limit: 24
+    t.integer  "int_review_total",   limit: 4
+    t.integer  "int_review1",        limit: 4
+    t.integer  "int_review2",        limit: 4
+    t.integer  "int_review3",        limit: 4
+    t.integer  "int_review4",        limit: 4
+    t.integer  "int_review5",        limit: 4
+    t.float    "float_review1",      limit: 24
+    t.float    "float_review2",      limit: 24
+    t.float    "float_review3",      limit: 24
+    t.float    "float_review4",      limit: 24
+    t.float    "float_review5",      limit: 24
+    t.string   "price",              limit: 255
+    t.string   "price2",             limit: 255
+    t.string   "additional",         limit: 255
+    t.string   "additional2",        limit: 255
+    t.string   "additional3",        limit: 255
+    t.string   "additional4",        limit: 255
+    t.string   "additional5",        limit: 255
+    t.string   "additional6",        limit: 255
+    t.string   "additional7",        limit: 255
+    t.string   "additional8",        limit: 255
   end
 
   add_index "cars", ["model_id"], name: "index_cars_on_model_id", using: :btree
@@ -212,10 +172,27 @@ ActiveRecord::Schema.define(version: 20160209070236) do
   add_index "models", ["brand_id"], name: "index_models_on_brand_id", using: :btree
   add_index "models", ["permalink"], name: "index_models_on_permalink", using: :btree
 
+  create_table "reviews", force: :cascade do |t|
+    t.integer  "car_id",         limit: 4
+    t.string   "name",           limit: 255
+    t.string   "email",          limit: 255
+    t.float    "rating",         limit: 24
+    t.integer  "resale_rating",  limit: 4
+    t.integer  "tawkeel_rating", limit: 4
+    t.integer  "p4v_rating",     limit: 4
+    t.integer  "luxury_rating",  limit: 4
+    t.integer  "safety_rating",  limit: 4
+    t.text     "comment",        limit: 65535
+    t.integer  "votes",          limit: 4
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
+
   create_table "specs", force: :cascade do |t|
     t.integer  "position",   limit: 4
     t.string   "key",        limit: 255
     t.boolean  "visible",    limit: 1
+    t.boolean  "table1",     limit: 1
     t.string   "name",       limit: 255
     t.string   "name_ar",    limit: 255
     t.text     "info",       limit: 65535

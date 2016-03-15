@@ -6,18 +6,20 @@
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:position) %>:</strong></dt>
   <dd><%= @spec.position %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:visible) %>:</strong></dt>
-  <dd><%= @spec.visible %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
-  <dd><%= @spec.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:key) %>:</strong></dt>
   <dd><%= @spec.key %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:visible) %>:</strong></dt>
+  <dd><%= @spec.visible %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:table1) %>:</strong></dt>
+  <dd><%= @spec.table1 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @spec.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:name_ar) %>:</strong></dt>
   <dd><%= @spec.name_ar %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:value) %>:</strong></dt>
-  <dd><%= @spec.value %></dd>
   <dt><strong><%= model_class.human_attribute_name(:info) %>:</strong></dt>
   <dd><%= @spec.info %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:value) %>:</strong></dt>
+  <dd><%= @spec.value %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),

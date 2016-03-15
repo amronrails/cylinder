@@ -1,7 +1,7 @@
 class CountriesController < ApplicationController
   layout'twitter'
-  before_action :set_country, only: [:show, :edit, :update, :destroy]
   before_action :confirm_login
+  before_action :set_country, only: [:show, :edit, :update, :destroy]
   # GET /countries
   # GET /countries.json
   def index

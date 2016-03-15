@@ -29,6 +29,7 @@
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_car_path(car), :class => 'btn btn-default btn-xs' %>
           <%= link_to "Price", { :controller => :car_prices, :action => :new, :car_id => car.id } , :class => 'btn btn-default btn-xs' %>
+          <%= link_to "specs", { :controller => :car_specs, :action => :new, :car_id => car.id } , :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       car_path(car),
                       :method => :delete,

@@ -23,11 +23,25 @@
     <%= error_span(@spec[:position]) %>
   </div>
   <div class="control-group">
+    <%= f.label :key, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :key, :class => 'form-control' %>
+    </div>
+    <%= error_span(@spec[:key]) %>
+  </div>
+  <div class="control-group">
     <%= f.label :visible, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :visible, :class => 'form-control' %>
     </div>
     <%= error_span(@spec[:visible]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :table1, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :table1, :class => 'form-control' %>
+    </div>
+    <%= error_span(@spec[:table1]) %>
   </div>
   <div class="control-group">
     <%= f.label :name, :class => 'control-label' %>
@@ -37,13 +51,6 @@
     <%= error_span(@spec[:name]) %>
   </div>
   <div class="control-group">
-    <%= f.label :key, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :key, :class => 'form-control' %>
-    </div>
-    <%= error_span(@spec[:key]) %>
-  </div>
-  <div class="control-group">
     <%= f.label :name_ar, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :name_ar, :class => 'form-control' %>
@@ -51,18 +58,18 @@
     <%= error_span(@spec[:name_ar]) %>
   </div>
   <div class="control-group">
-    <%= f.label :value, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :value, :class => 'form-control' %>
-    </div>
-    <%= error_span(@spec[:value]) %>
-  </div>
-  <div class="control-group">
     <%= f.label :info, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :info, :class => 'form-control' %>
     </div>
     <%= error_span(@spec[:info]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :value, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :value, :class => 'form-control' %>
+    </div>
+    <%= error_span(@spec[:value]) %>
   </div>
 
 

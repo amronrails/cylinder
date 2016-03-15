@@ -1,0 +1,59 @@
+<%= form_for @car_specific_spec, :html => { :class => "form-horizontal car_specific_spec" } do |f| %>
+
+    <% if @car_specific_spec.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@car_specific_spec.errors.count, "error") %> prohibited this car_specific_spec from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @car_specific_spec.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :car_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :car_id, :class => 'form-control' %>
+    </div>
+    <%= error_span(@car_specific_spec[:car_id]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :specific_spec_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :specific_spec_id, :class => 'form-control' %>
+    </div>
+    <%= error_span(@car_specific_spec[:specific_spec_id]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :value, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :value, :class => 'form-control' %>
+    </div>
+    <%= error_span(@car_specific_spec[:value]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :value_ar, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :value_ar, :class => 'form-control' %>
+    </div>
+    <%= error_span(@car_specific_spec[:value_ar]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :hary, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :hary, :class => 'form-control' %>
+    </div>
+    <%= error_span(@car_specific_spec[:hary]) %>
+  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            car_specific_specs_path, :class => 'btn btn-default' %>
+
+<% end %>

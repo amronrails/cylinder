@@ -18,7 +18,7 @@ class CarSpecsController < ApplicationController
 
   # GET /car_specs/new
   def new
-    @car_spec = CarSpec.new
+    @car_spec = CarSpec.new(:car_id => params[:car_id])
     @cars = Car.sorted
     @specs = Spec.all
   end

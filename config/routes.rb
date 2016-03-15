@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  resources :car_specific_specs
+
+  resources :specific_specs
+
+  resources :car_images
+
+  resources :reviews
+
   resources :car_specs
 
   resources :specs

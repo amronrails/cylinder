@@ -23,8 +23,11 @@ class EgyptController < ApplicationController
     if @car.nil?
       redirect_to(:action => 'index')
     end
+    unless @car.nil?
+    @model = Model.find(@car.model_id)
+    @brand = Brand.find(@model.brand_id)
+    end
   end
-
   def dealers
     
   end

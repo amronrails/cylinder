@@ -12,4 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require cars-js
+//= require imageslider-js
+//= require jquery-ui
 //= require egypt

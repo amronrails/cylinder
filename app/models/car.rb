@@ -5,6 +5,8 @@ class Car < ActiveRecord::Base
 	has_many :car_prices
 	has_many :agents, :through => :car_prices
 
+	has_many :reviews
+	
 	has_many :car_specs
 	has_many :specs, :through => :car_specs
 

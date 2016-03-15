@@ -6,7 +6,7 @@ class SpecsController < ApplicationController
   # GET /specs
   # GET /specs.json
   def index
-    @specs = Spec.all
+    @specs = Spec.sorted
   end
 
   # GET /specs/1
@@ -74,3 +74,10 @@ class SpecsController < ApplicationController
       params.require(:spec).permit(:position, :visible, :name, :key, :name_ar, :value, :info)
     end
 end
+
+# <% @car.specs.sorted.each do |spc| %>
+#     <tr>
+#     <td> <%=spc.name_ar=%> </td>
+#     <td> <%=CarSpec.=%> </td>   
+#     </tr>
+#     <% end %>

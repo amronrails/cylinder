@@ -2,6 +2,8 @@ class Model < ActiveRecord::Base
 #relations
 belongs_to :brand
 has_many :cars
+has_many :car_images
+
 
 #inbetween
  acts_as_list :scope => :brand

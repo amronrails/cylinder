@@ -47,9 +47,9 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: cylinder_production
-  username: cylinder
-  password: <%= ENV['CYLINDER_DATABASE_PASSWORD'] %>
+#production:
+# adapter: postgresql
+# database: cylinder
+# username: deply
+# password: MagdyAmr@6Cylinder2016
 

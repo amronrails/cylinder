@@ -1,0 +1,101 @@
+<%= form_for @review, :html => { :class => "form-horizontal review" } do |f| %>
+
+    <% if @review.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @review.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :car_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :car_id, :class => 'form-control' %>
+    </div>
+    <%= error_span(@review[:car_id]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+    <%= error_span(@review[:name]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :email, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :email, :class => 'form-control' %>
+    </div>
+    <%= error_span(@review[:email]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :rating, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :rating, :class => 'form-control' %>
+    </div>
+    <%= error_span(@review[:rating]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :resale_rating, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :resale_rating, :class => 'form-control' %>
+    </div>
+    <%= error_span(@review[:resale_rating]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :tawkeel_rating, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :tawkeel_rating, :class => 'form-control' %>
+    </div>
+    <%= error_span(@review[:tawkeel_rating]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :p4v_rating, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :p4v_rating, :class => 'form-control' %>
+    </div>
+    <%= error_span(@review[:p4v_rating]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :luxury_rating, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :luxury_rating, :class => 'form-control' %>
+    </div>
+    <%= error_span(@review[:luxury_rating]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :safety_rating, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :safety_rating, :class => 'form-control' %>
+    </div>
+    <%= error_span(@review[:safety_rating]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :comment, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :comment, :class => 'form-control' %>
+    </div>
+    <%= error_span(@review[:comment]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :votes, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :votes, :class => 'form-control' %>
+    </div>
+    <%= error_span(@review[:votes]) %>
+  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            reviews_path, :class => 'btn btn-default' %>
+
+<% end %>
