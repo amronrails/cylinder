@@ -1,2 +1,50 @@
-<h1>Soon#index</h1>
-<p>Find me in app/views/soon/index.html.erb</p>
+<!doctype html>
+<html>
+<head>
+
+
+<style>
+body
+{
+ 	
+	margin:0px;
+	}
+#img{
+	display:block;
+	margin-right: auto;
+	margin-left: auto;
+	min-width: 500px;	
+	}
+
+
+</style>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<%= image_tag("website_sora.png", :id => "sora") =%>
+</body>
+
+
+<%= javascript_include_tag('jquery-1.12.0')  %>
+<script> 
+var width;
+ var height;
+$(document).ready(function(e) {
+      width = $(window).width();
+  height = $(window).height();
+ $("#sora").css("width",width).css("height",height);
+});
+ 
+ $(window).resize(function(){
+	 width = $(window).width();
+   height = $(window).height();
+ $("#sora").css("width",width).css("height",height );
+ 
+	 });
+ 
+</script>
+
+
+</html>
