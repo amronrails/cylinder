@@ -1,49 +1,99 @@
-<!doctype html>
-<html>
-<head>
-
-<title>6 cylinder - ٦ سلندر</title>
-<style>
-body
-{
- 	
-	margin:0px;
-	}
-#img{
-	display:block;
-	margin-right: auto;
-	margin-left: auto;
-	}
-
-
-</style>
-<meta charset="utf-8">
-<title>Untitled Document</title>
-</head>
-
-<body>
-<%= image_tag("website_sora.png", :id => "sora") =%>
-</body>
-
-
-<%= javascript_include_tag('jquery-1.12.0')  %>
-<script> 
-var width;
- var height;
-$(document).ready(function(e) {
-      width = $(window).width();
-  height = $(window).height();
- $("#sora").css("width",width).css("height",height);
-});
+  <!doctype html>
+  <html dir="rtl">
+  
+  <head>
+  
  
- $(window).resize(function(){
-	 width = $(window).width();
-   height = $(window).height();
- $("#sora").css("width",width).css("height",height );
- 
-	 });
- 
-</script>
+  
+  <meta charset="utf-8">
+    <link rel="stylesheet" href="cars-style.css" />
+      <link rel="stylesheet" href="jquery-ui.css" />
+     <link rel="stylesheet" href="fotorama.css" />    
+  
+  
+    
+  </head>
+  
+  <body>
+   
+  <header id="header">
+   
+    <div class="slides">
+   <div id="first" class="hvr-bounce-to-top">
+   <%= image_tag("car-icon", width: '50', height: '50', alt: "") %>
+    <p>سيارات جديدة</p> </div>
+    <div id="second" class="hvr-bounce-to-top"> نقيلي </div>
+   <div id="third" class="hvr-bounce-to-top">المعارض </div>
+   <div id="forth" class="hvr-bounce-to-top"> أخبار</div>
+   <div id="fifth" class="hvr-bounce-to-top">كسر زيرو </div>
+   <div id="logo" class="hvr-bounce-to-top">
+   <%= image_tag("hiit.png", width: '408', height: '77', id: 'image-logo') %>
+   </div>
+  </div> 
+  </header>
+  
+  <nav class="main-nav">
+     <ul class="nav-elements">
+     <li> <a href="#"> بحث</a>
+        <!-- <ul>
+         <li> <a href="sub1-main"> sub1-main</a>
+         <ul>
+         <li> <a href="sub1-sub1-main">  sub1-sub1-main</a></li>
+        <li> <a href="sub2-sub1-main">sub2-sub1-main</a></li>
+        <li> <a href="sub3-sub1-main"> sub3-sub1-main</a></li>
+        </ul> -->
+         
+         </li>
+        <!-- <li> <a href="sub2-main"> sub2-main</a></li>
+        <li> <a href="sub3-main"> sub3-main</a>
+            <ul>
+         <li> <a href="sub1-sub1-main">  sub1-sub1-main</a></li>
+        <li> <a href="sub2-sub1-main">sub2-sub1-main</a></li>
+        <li> <a href="sub3-sub1-main"> sub3-sub1-main</a></li>
+        </ul>
+        
+        </li> -->
+<!--         </ul>
+ -->      </li>
+     <li> <a href= "/" > الليستة</a> 
+     <!-- <ul>
+         <li> <a href="sub1-main2"> sub1-main2</a></li>
+        <li> <a href="sub2-main2"> sub2-main2</a></li>
+        <li> <a href="sub3-main3"> sub3-main2</a></li>
+        </ul> -->
+     </li>
+     <li> <a href= "/" > جديدة  </a></li>
+     <li><a href= "/" >الرئيسية </a></li>
+     </ul>
+     
+      <div class="rightcorner"></div>
+   </nav>
+  <!--main section-->
+  
+  <div class="main">
+  <div class="main-containter">
+  
+   <section class="top_section" id=" ">
+    <H1>Under Construction</H1>
+	<p>اتقل تاخد حاجة نضيفة</p>
 
+    </section>
+   
+    
+    <aside id="aside" class="sections">
+    <div id="h1">
+  
+    
+     </div>
+    </aside>
+    </div>
+   
+  
 
-</html>
+  <footer class="footer">Content for New footer Tag Goes Here</footer>
+   
+  <%= stylesheet_link_tag ('public') %>
+  <%= javascript_include_tag('public')  %>
+   <script type="text/javascript" src="http://counter5.01counter.com/private/counter.js?c=fdd079c1a4fcf3c2bca4cc73956b2add"></script>
+  </body>
+  </html>

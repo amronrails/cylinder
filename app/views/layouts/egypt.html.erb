@@ -19,12 +19,16 @@
   <header id="header">
    
     <div class="slides">
-   <div id="first" class="hvr-bounce-to-top"><img src="images/car-icon.png" width="50" height="50" alt=""/> <p>سيارات جديدة</p> </div>
+   <div id="first" class="hvr-bounce-to-top">
+   <%= image_tag("car-icon", width: '50', height: '50', alt: "") %>
+    <p>سيارات جديدة</p> </div>
     <div id="second" class="hvr-bounce-to-top"> نقيلي </div>
    <div id="third" class="hvr-bounce-to-top">مراكز خدمة </div>
    <div id="forth" class="hvr-bounce-to-top"> أخبار</div>
    <div id="fifth" class="hvr-bounce-to-top">كسر زيرو </div>
-   <div id="logo" class="hvr-bounce-to-top"><img src="images/logo.png" width="408" height="77" alt="" id="image-logo" /></div>
+   <div id="logo" class="hvr-bounce-to-top">
+   <%= image_tag("hiit.png", width: '408', height: '77', id: 'image-logo') %>
+   </div>
   </div> 
   </header>
   
@@ -58,8 +62,8 @@
         <li> <a href="sub3-main3"> sub3-main2</a></li>
         </ul>
      </li>
-     <li> <a href= "google.com" >عربية جديدة  </a></li>
-     <li><a href= "google.com" >الرئيسية </a></li>
+     <li> <a href= "/newcars/" >عربية جديدة  </a></li>
+     <li><a href= "/" >الرئيسية </a></li>
      </ul>
      
       <div class="rightcorner"></div>

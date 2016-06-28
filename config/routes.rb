@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   resources :users
 
-  root "soon#index"
+  root "egypt#index"
 
 
   get 'compare', :to => "egypt#compare"
@@ -28,6 +28,10 @@ Rails.application.routes.draw do
   get 'compare/:permalink1/:permalink2/:permalink3/:permalink4', :to => "egypt#compare"
 
   get 'vehicles/:permalink', :to => "egypt#vehicles"
+
+  get 'newcars/:permalink', :to => "egypt#newcars"
+
+  get 'newcars/', :to => "egypt#newcars"
 
   get 'motors/:permalink', :to => "egypt#motors"
 

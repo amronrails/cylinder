@@ -1,5 +1,7 @@
+<% if @company.nil?%>
 <h1>Egypt#newcars</h1>
 <p>Find me in app/views/egypt/newcars.html.erb</p>
+<% else %>
 
 <% @models.each  do |model| %>
 <h3><%= model.name%></h3>
@@ -32,3 +34,4 @@ function Compare(){
 	console.log(y);
 }
 </script>
+<% end %>

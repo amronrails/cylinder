@@ -4,12 +4,12 @@ class EgyptController < ApplicationController
     @brands = Brand.sorted
   end
 
-  def companies
-    @company = Brand.where(:permalink => params[:permalink], :visible => true).first
-    if @company.nil?
-      redirect_to(:action => 'index')
-    end
-  end
+  # def companies
+  #   @company = Brand.where(:permalink => params[:permalink], :visible => true).first
+  #   if @company.nil?
+  #     redirect_to(:action => 'index')
+  #   end
+  # end
 
   def vehicles
     @vehicle = Model.where(:permalink => params[:permalink], :visible => true).first
@@ -39,12 +39,17 @@ class EgyptController < ApplicationController
   end
 
   def newcars
-    @models = Model.sorted
-    @compare = Car.new
-    respond_to do |format|
+
+    @company = Brand.where(:permalink => params[:permalink], :visible => true).first
+    unless @company.nil?
+      @models = Model.sorted
+      @compare = Car.new
+      respond_to do |format|
        format.html # new.html.erb
        format.js
     end
+    end
+    
   end
 
   def compare
