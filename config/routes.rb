@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   resources :users
 
-  root "egypt#index"
+  root "soon#index"
 
 
   get 'compare', :to => "egypt#compare"
