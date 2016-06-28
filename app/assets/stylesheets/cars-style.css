@@ -144,7 +144,6 @@ nav > ul > li> a  { padding: 10px 20px 15px 20px ; text-align:center}
 	flex-grow: 1;
 	padding-top: 20px;
 	position: relative;
-	margin-top: 11px;
 	}	
 	#first:before {
 	background-color: #057370;
