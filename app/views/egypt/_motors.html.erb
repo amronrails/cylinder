@@ -1,0 +1,107 @@
+<style>
+  .carbrands{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: -19px;
+    -webkit-box-shadow: inset 0px 0px;
+    box-shadow: inset 0px 0px;
+    position:relative;
+  }
+
+  .info{
+    text-align: center;
+    border-radius: 4px;
+    width: 33%;
+
+  }
+  .info-header{
+    margin-top: -7px;
+    text-shadow: 0px 0px;
+
+  }
+
+  .info-data{
+    width: 100%;
+    padding-top: 14px;
+
+  }
+
+
+  .red{
+
+    background:#D43739;
+  }
+
+  #carbrandssection{
+    margin-top: -23px;
+  }
+
+  .tfasel{
+    background-color: hsla(359,83%,42%,1.00);
+    height: 100px;
+    position: absolute;
+    right: 0px;
+  }
+  .tfasel img{
+
+    height: 30px;
+  }
+
+  .eh{
+    height: 100px;
+
+  }
+</style>
+
+<section class="top_section" id=" ">
+  <section class="sections" id="carbrandssection"  >
+    <h3 id="carname" class="section_header"> اختار عربية </h3>
+    <section class="carbrands">
+
+
+        <% @models.each  do |model| %>
+            <div  class="info" >
+
+              <%= image_tag model.avatar.url, class: 'info-data', alt: '' %>
+              <p class="info-header" id="price"><%= model.name%></p>
+
+              <div class="tfasel" id="f1">
+                <img class="info-data" src="kia/car-sportage.png" alt=""/>
+                <img class="info-data" src="kia/car-sportage.png" alt=""/>
+
+              </div>
+              <div class="eh"></div>
+            </div>
+
+    <% end %>
+
+
+    </section>
+  </section>
+
+</section>
+  <!--<br>-->
+
+  <!--<button type="button"-->
+  <!--onclick="Compare()">-->
+  <!--Compare</button>-->
+
+<script type="text/javascript">
+  var x = document.getElementsByName('compare');
+  var y;
+
+  $("#compare").change(function() {
+    if(this.checked) {
+      console.log("I reached here");
+      y = x[0].value;
+    }
+    else{
+      console.log("unchecked");
+      y=null;
+    }
+  });
+  function Compare(){
+    console.log(y);
+  }
+</script>

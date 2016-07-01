@@ -41,18 +41,22 @@ class EgyptController < ApplicationController
   def newcars
 
     @company = Brand.where(:permalink => params[:permalink], :visible => true).first
-    if @company.nil?
-      @brands = Brand.visible.sorted
-      @compare = Car.new
-      respond_to do |format|
-       format.html # new.html.erb
-       format.js
+    @model = Model.where(:permalink => params[:permalink], :visible => true).first
+    if @company.nil? && @model.nil?
+        @brands = Brand.visible.sorted
+        @compare = Car.new
+        respond_to do |format|
+          format.html # new.html.erb
+          format.js
         end
 
-     else
+    elsif @company
       @models = @company.models.visible.sorted
+    else
+      #things to do with cars
     end
-    
+
+
   end
 
   def compare

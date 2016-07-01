@@ -1,100 +1,155 @@
-  <!doctype html>
-  <html dir="rtl">
-  
-  <head>
-  
- 
-  
+<!doctype html>
+<html dir="rtl">
+
+<html>
+<head>
   <meta charset="utf-8">
-    <link rel="stylesheet" href="cars-style.css" />
-      <link rel="stylesheet" href="jquery-ui.css" />
-     <link rel="stylesheet" href="fotorama.css" />    
-  
-  
-    
-  </head>
-  
-  <body>
-   
-  <header id="header">
-   
-    <div class="slides">
-   <div id="first" class="hvr-bounce-to-top">
-   <%= image_tag("car-icon", width: '50', height: '50', alt: "") %>
-    <p>سيارات جديدة</p> </div>
-    <div id="second" class="hvr-bounce-to-top"> نقيلي </div>
-   <div id="third" class="hvr-bounce-to-top">مراكز خدمة </div>
-   <div id="forth" class="hvr-bounce-to-top"> أخبار</div>
-   <div id="fifth" class="hvr-bounce-to-top">كسر زيرو </div>
-   <div id="logo" class="hvr-bounce-to-top">
-   <%= image_tag("hiit.png", width: '408', height: '77', id: 'image-logo') %>
-   </div>
-  </div> 
-  </header>
-  
-  <nav class="main-nav">
-     <ul class="nav-elements">
-     <li> <a href="google.com"> بحث</a>
-        <ul>
-         <li> <a href="sub1-main"> sub1-main</a>
-         <ul>
-         <li> <a href="sub1-sub1-main">  sub1-sub1-main</a></li>
-        <li> <a href="sub2-sub1-main">sub2-sub1-main</a></li>
-        <li> <a href="sub3-sub1-main"> sub3-sub1-main</a></li>
-        </ul>
-         
-         </li>
+  <title>Untitled Document</title>
+
+  <link rel="stylesheet" href="overallstyle.css" />
+
+
+  <style>
+    .carbrands{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: -19px;
+    }
+
+    .info{
+      width: 130px;
+      text-align: center;
+      border-radius: 4px;
+      height: 120px;
+      -webkit-box-shadow: 0px 0px 0px -1px;
+      box-shadow: 0px 0px 0px -1px;
+      border-left: thin dotted #CCCCCC;
+      border-bottom: thin dotted #CBCBCB;
+
+    }
+    .info-header{
+    //border-top-left-radius: 4px;
+    //border-top-right-radius: 4px;
+      display: inline-block;
+    //width: 100%;
+      margin-top: 11px;
+      margin-bottom: 0px;
+      color: #F18D05;
+    //height: 30px;
+      padding-top: 4px;
+    //box-shadow: 0px 0px;
+    //border-bottom: 2px dotted #DFDFDF;
+    }
+
+    .info-data{
+      width:110px;
+      height:70px;
+
+    }
+
+    .red{
+
+      background:#D43739;
+    }
+
+    #carbrandssection{
+      margin-top: -23px;
+    }
+  </style>
+
+
+</head>
+
+<body>
+<header id="header">
+
+  <div class="slides">
+    <div id="first" class="hvr-bounce-to-top"><img src="images/car-icon.png" width="50" height="50" alt=""/> <p>سيارات جديدة</p> </div>
+    <div id="second" class="hvr-bounce-to-top">  نقيلي </div>
+    <div id="third" class="hvr-bounce-to-top">مراكز خدمة </div>
+    <div id="forth" class="hvr-bounce-to-top"> أخبار</div>
+    <div id="fifth" class="hvr-bounce-to-top">كسر زيرو </div>
+    <div id="logo" class="hvr-bounce-to-top"><%= image_tag("hiit.png", width: '408', id: 'image-logo') %>
+    </div>
+  </div>
+</header>
+
+<!---------Nav bar  ----->
+<nav class="main-nav">
+  <ul class="nav-elements">
+    <li> <a href="google.com"> بحث</a>
+      <ul>
+        <li> <a href="sub1-main"> sub1-main</a>
+          <ul>
+            <li> <a href="sub1-sub1-main">  sub1-sub1-main</a></li>
+            <li> <a href="sub2-sub1-main">sub2-sub1-main</a></li>
+            <li> <a href="sub3-sub1-main"> sub3-sub1-main</a></li>
+          </ul>
+
+        </li>
         <li> <a href="sub2-main"> sub2-main</a></li>
         <li> <a href="sub3-main"> sub3-main</a>
-            <ul>
-         <li> <a href="sub1-sub1-main">  sub1-sub1-main</a></li>
-        <li> <a href="sub2-sub1-main">sub2-sub1-main</a></li>
-        <li> <a href="sub3-sub1-main"> sub3-sub1-main</a></li>
-        </ul>
-        
+          <ul>
+            <li> <a href="sub1-sub1-main">  sub1-sub1-main</a></li>
+            <li> <a href="sub2-sub1-main">sub2-sub1-main</a></li>
+            <li> <a href="sub3-sub1-main"> sub3-sub1-main</a></li>
+          </ul>
+
         </li>
-        </ul>
-      </li>
-     <li> <a href= "google.com" > مستعمل</a> 
-     <ul>
-         <li> <a href="sub1-main2"> sub1-main2</a></li>
+      </ul>
+    </li>
+    <li> <a href= "google.com" > مستعمل</a>
+      <ul>
+        <li> <a href="sub1-main2"> sub1-main2</a></li>
         <li> <a href="sub2-main2"> sub2-main2</a></li>
         <li> <a href="sub3-main3"> sub3-main2</a></li>
-        </ul>
-     </li>
-     <li> <a href= "/newcars/" >عربية جديدة  </a></li>
-     <li><a href= "/" >الرئيسية </a></li>
-     </ul>
-     
-      <div class="rightcorner"></div>
-   </nav>
-  <!--main section-->
-  
-  <div class="main">
+      </ul>
+    </li>
+    <li> <a href= "google.com" >عربية جديدة  </a></li>
+    <li><a href= "google.com" >الرئيسية </a></li>
+  </ul>
+
+  <div class="rightcorner"></div>
+</nav>
+
+<!------main section ---->
+<div class="main">
   <div class="main-containter">
   
-   <section class="top_section" id=" ">
     <%= yield %>
 
-    </section>
-   
-    
-        <aside id="aside" class="sections">
-    <div id="h1" class="section_header">
- البتاع اللي على الجنب
-       </div>
+    <aside id="aside" class="sections">
+      <div id="h1" class="section_header">
+        البتاع اللي على الجنب
+      </div>
     </aside>
-    </div>
-   
-  
+  </div>
+
+
 
   <footer class="footer">Content for New footer Tag Goes Here</footer>
+
+</div>
+
+
+<!----------end of main --->
+<%= stylesheet_link_tag ('public') %>
+<%= javascript_include_tag('public')  %>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80241106-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
    
-  <%= stylesheet_link_tag ('public') %>
-  <%= javascript_include_tag('public')  %>
-   
-  </body>
-  </html>
+
 
 
 

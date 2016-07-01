@@ -1,0 +1,316 @@
+<section class="top_section" id=" ">
+
+  <div id="general-info" class="sections">
+
+    <div id="carnamelogo">
+      <div id="carlogo"></div>
+      <h3 id="carname">هيونداي /  النترا 2016 / مانيوال </h3>
+    </div>
+
+    <div class="top">
+      <div  class="info" >
+        <p class="info-header" id="price">السعر</p>
+        <p class="info-data"> 180,000<br>جنيه</p>
+      </div>
+      <div  class="info" >
+        <p class="info-header" id="cc">سعة المحرك</p>
+        <p class="info-data"> 1600 <br> سي سي </p>
+      </div>
+      <div  class="info">
+        <p class="info-header"  id="taseet">تقسيط</p>
+        <p class="info-data"> 1200<br> جنيه\شهر</p>
+      </div>
+      <div  class="info" >
+        <p class="info-header" id="moadam">اقل مقدم</p>
+        <p class="info-data">40,000<br>جنيه</p>
+      </div>
+    </div>
+
+    <div id="imageslider" >
+      <div id="show">
+
+        <div id="preview">
+          <div id="image"> </div>
+          <div id="nextpicture" class="nav"></div>
+          <div id="previouspicture" class="nav"></div>
+        </div>
+
+        <div id="thubnails">
+          <div id="back"></div>
+          <div id="next"></div>
+
+          <div id="area">
+            <div id="allarea">
+              <% @model.car_images.each do |image| %>
+                  <%= image_tag(image.avatar.url)%>
+              <% end %>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="tabs"  >
+      <ul>
+        <li><a href="#tabs-1">مواصفات</a></li>
+        <li><a href="#tabs-2"> معارض </a></li>
+        <li><a href="#tabs-3">صور</a></li>
+
+      </ul>
+      <div id="tabs-1">
+        <div id="accordion">
+          <h3>الشكل الخارجي </h3>
+          <div>
+            <table >
+              <tr>
+                <td> سعة الموتور</td>
+                <td>  قوية فشخ</td>
+              </tr>
+              <tr>
+                <td> عدد  الابواب</td>
+                <td>  4</td>
+              </tr>
+              <tr>
+                <td> الريحة</td>
+                <td>معفنة</td>
+              </tr>
+              <tr>
+                <td>  السرعة </td>
+                <td>  بطيئة</td>
+              </tr>
+            </table>
+          </div>
+          <h3>الموتور</h3>
+          <div>
+            <table >
+              <tr>
+                <td> سعة الموتور</td>
+                <td>  قوية فشخ</td>
+              </tr>
+              <tr>
+                <td> عدد  الابواب</td>
+                <td>  4</td>
+              </tr>
+              <tr>
+                <td> الريحة</td>
+                <td>معفنة</td>
+              </tr>
+              <tr>
+                <td>  السرعة </td>
+                <td>  بطيئة</td>
+              </tr>
+            </table>
+          </div>
+          <h3>الاداء</h3>
+          <div>
+            <p>
+              Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+              Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+              ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+              lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+            </p>
+            <ul>
+              <li>List item one</li>
+              <li>List item two</li>
+              <li>List item three</li>
+            </ul>
+          </div>
+          <h3>عامة</h3>
+          <div>
+            <p>
+              Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+              et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+              faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+              mauris vel est.
+            </p>
+            <p>
+              Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+              Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+              inceptos himenaeos.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="tabs-2">
+        <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+      </div>
+      <div id="tabs-3">
+        <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+        <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+      </div>
+
+    </div>
+    <div class="headers" id="reviews">
+      <p>رأي اللي ساقها </p>
+
+    </div>
+    <div class="headers">
+      <p> معارض فيها العربية </p>
+
+    </div>
+    <div class="headers">
+      <p>  سيارات هونداي أخرى</p>
+
+    </div>
+    <div class="headers">
+      <p>  عربيات بسعر قريب منها </p>
+
+    </div>
+
+
+  </div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<style>
+
+
+
+  .top_section {
+    width:652px;
+
+    float:right;
+  }
+
+
+  #imageslider{
+    position: relative;
+  }
+
+  #carnamelogo{
+    display: flex;
+
+    margin-bottom: -10px;
+  }
+  #carlogo{
+    width: 70px;
+    height: 45px;
+    background-color: #F6A828;
+    border-top-right-radius: 10px;
+  //border-bottom-right-radius: 10px;
+    background-image: url(elantra2016/logo1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+  //margin-left: 5px;
+  //border: 1px solid #e78f08;
+    border: 1px solid #DC8004;
+  }
+  #carname{
+    font-weight: normal;
+  //	font-size: 25px;
+    background-color: #E93908;
+    color: #FFFFFF;
+    width: 100%;
+    border-top-left-radius: 10px;
+  //border-bottom-left-radius: 10px;
+    padding-right: 10px;
+  //border:1px solid #E98265;
+    padding-top: 3px;
+    height: 45px;
+    margin-top: 0px;
+  }
+  #general-info{
+    margin-bottom:10px;
+  }
+
+  .top{
+    display: flex;
+    justify-content: space-around;
+    border-radius: 4px;
+    border-bottom: 2px dashed #E5E5E5;
+  }
+  .info{
+    background-color: #C9C9C9;
+    width: 111px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  .info-header{
+    background-color: #F18D05;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    display: inline-block;
+    width: 100%;
+    margin-top: -13px;
+    margin-bottom: 5px;
+    color: #fff;
+  }
+
+  .info-data{
+    display: inline;
+  }
+  #price{background-color:#E54028}
+  #cc{background-color:#F18D05}
+  #taseet{background-color:#7DB500}
+  #moadam{background-color:#00A1CB}
+
+  .headers{
+
+  //border:1px solid #DDDDDD;
+  //border-radius:4px;
+    height:120px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10px;
+
+  }
+  #reviews p{
+    background-color: #F6A828;
+    border: 1px solid #e78f08;
+    font-size: 25px;
+    border-radius: 4px;
+    color: #FFFFFF;
+    padding-right: 10px;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  Table  {
+    width: 100%;
+    padding-top: 5px;
+    padding-right: 0px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+  }
+
+
+  td{
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 8px;
+  }
+  td:first-child{
+    color:#EB8F00;
+  }
+  td:last-child{
+  }
+  tr:nth-child(odd) td {
+    background:#EBEBEB;
+  }
+  #tabs{
+    margin-top:12px;
+    margin-left:auto;
+    margin-right:auto;
+    border:none;
+  }
+
+</style>

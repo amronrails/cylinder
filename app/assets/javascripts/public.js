@@ -11,8 +11,8 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
+//= require jquery-ui
 //= require cars-js
 //= require imageslider-js
-//= require jquery-ui
+//= require brandcars.js
 //= require egypt

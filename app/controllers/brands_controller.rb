@@ -20,10 +20,12 @@ class BrandsController < ApplicationController
   # GET /brands/new
   def new
     @brand = Brand.new
+    @countries = Country.all
   end
 
   # GET /brands/1/edit
   def edit
+    @countries = Country.all
   end
 
   # POST /brands
@@ -75,6 +77,6 @@ class BrandsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def brand_params
-      params.require(:brand).permit(:name, :position, :visible, :permalink, :counter, :description, :icon)
+      params.require(:brand).permit(:name, :position, :visible, :country_id, :permalink, :counter, :description, :icon)
     end
 end

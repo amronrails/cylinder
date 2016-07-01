@@ -22,6 +22,15 @@
     </div>
     <%= error_span(@brand[:name]) %>
   </div>
+
+    <div class="control-group">
+      <%= f.label :country_id, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.select(:country_id, @countries.map {|p| [p.name, p.id] }, :class => 'form-control') %>
+      </div>
+      <%= error_span(@brand[:country_id]) %>
+    </div>
+
   <div class="control-group">
     <%= f.label :position, :class => 'control-label' %>
     <div class="controls">
