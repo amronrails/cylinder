@@ -12,6 +12,8 @@
  *
  *= require_self
  *= require cars-style
+ *= require imageslideer
+ *= require jquery-ui
  */
 
 @font-face{
