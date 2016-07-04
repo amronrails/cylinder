@@ -9,20 +9,21 @@
     position:relative;
   }
 
-  .info{
+  .arbyat{
     text-align: center;
     border-radius: 4px;
     width: 33%;
 
   }
-  .info-header{
+  .arbyat-header{
     margin-top: -7px;
     text-shadow: 0px 0px;
 
   }
 
-  .info-data{
-    width: 100%;
+  .arbyat-data{
+    width: auto;
+    max-height:105px;
     padding-top: 14px;
 
   }
@@ -53,7 +54,6 @@
 
   }
 </style>
-
 <section class="top_section" id=" ">
   <section class="sections" id="carbrandssection"  >
     <h3 id="carname" class="section_header"> اختار عربية </h3>
@@ -61,17 +61,18 @@
 
 
         <% @models.each  do |model| %>
-            <div  class="info" >
+            <div  class="arbyat" >
 
-              <%= image_tag model.avatar.url, class: 'info-data', alt: '' %>
-              <p class="info-header" id="price"><%= model.name%></p>
+
+              <%= image_tag model.avatar.url, class: 'arbyat-data', alt: '' %>
+              <p class="arbyat-header" id="price"><%= model.name%></p>
 
               <div class="tfasel" id="f1">
-                <img class="info-data" src="kia/car-sportage.png" alt=""/>
-                <img class="info-data" src="kia/car-sportage.png" alt=""/>
+                <img class="arbyat-data" src="kia/car-sportage.png" alt=""/>
+                <img class="arbyat-data" src="kia/car-sportage.png" alt=""/>
 
               </div>
-              <div class="eh"></div>
+              <div class="eh">el mfrod tnzl t7t</div>
             </div>
 
     <% end %>

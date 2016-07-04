@@ -8,9 +8,9 @@ $(document).ready(function( ) {
     $(".tfasel").css("width",s);
 });
 
-$(".info").click(function(){
+$(".arbyat").click(function(){
     $(".tfasel").not($(this).find(".tfasel")).hide(500)
-    $(".eh").not($(this).find(".eh")).hide(500)
+   $(".eh").not($(this).find(".eh")).hide(500)
 
     $(this).find(".tfasel").slideToggle(500);
     $(this).find(".eh").slideToggle(500);
